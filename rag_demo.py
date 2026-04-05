@@ -113,12 +113,11 @@ while True:
     context = "\n\n".join([chunk.page_content for chunk in relevant_chunks])
     
     prompt = f"""Use the following context to answer the question. If the answer is not in the context, say "I don't have that information in my documents."
-
-Context:
-{context}
+#from txt file we have chunks of information and we want to use that to answer the question if the answer is not in the context we want to say that we dont have that information in our documents
+Context: {context}
 
 Question: {question}
-
+#user question is stored in question variable and we want to use that to answer the question using the context we have retrieved from vector database and if the answer is not in the context we want to say that we dont have that information in our documents
 Answer:"""
     
     try:
